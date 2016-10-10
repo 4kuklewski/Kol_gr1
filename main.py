@@ -9,7 +9,7 @@ while True:
 	angle = plane.getAngle()
 	print "Current angle: ", angle
 	correction = plane.getCorrection()
-	correction = plane.setCorrection(correction)
-	print "Applied correction: ", correction
+	plane.setCorrection(correction)
+	print "Applied correction: ", plane.getAppliedCorrection()
 	time.sleep(1)
 	

@@ -12,9 +12,11 @@ class Plane:
 		return self.angle
 
 	def setCorrection(self, correction):
-		correction = (correction/2. + self.stdev)
+		self.correction = (correction/2. + self.stdev)
 		self.angle -= correction
-		return correction
+	
+	def getAppliedCorrection(self):
+		return self.correction
 
 	def getCorrection(self):
 		# returns max possible correction for plane
